@@ -3,7 +3,7 @@
 # usage: add a letter to list[] to produce larger grids
 #        only produces square grids
 
-list = ['a', 'b', 'c', 'd']
+list = ['a', 'b', 'c', 'd', 'e', 'f']
 
 for letter in list:
 	for s in range (len(list)):
@@ -33,13 +33,14 @@ for letter in list:
 			down = list[index+1]+str(s)
 
 
-		s = (str(s)+""": {ZONE_NAME: '', DESCRIPTION: 'description',
+		s = (str(s)+"""\': {ZONE_NAME: '', 
+					  DESCRIPTION: 'description',
 				      EXAMINATION: 'examine',
 				      SOLVED: False,
-				      UP: """+up+""",
-				      DOWN: """+down+""",
-				      LEFT: """+ left+""",
-				      RIGHT: """+right+""","""+'\n')
-		print(letter + s)
+				      UP: \'"""+up+"""\',
+				      DOWN: \'"""+down+"""\',
+				      LEFT: \'"""+ left+"""\',
+				      RIGHT: \'"""+right+"""\'},"""+'\n')
+		print("'" + letter + s)
 
 
